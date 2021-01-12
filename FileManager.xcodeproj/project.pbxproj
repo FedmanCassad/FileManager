@@ -12,6 +12,9 @@
 		D8A157DD25AA75E600287FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A157DC25AA75E600287FD6 /* Assets.xcassets */; };
 		D8A157E025AA75E600287FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A157DE25AA75E600287FD6 /* LaunchScreen.storyboard */; };
 		D8A157EC25AA8DDB00287FD6 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157EB25AA8DDB00287FD6 /* FileManagerService.swift */; };
+		D8A157F225ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157F125ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift */; };
+		D8A157F725ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157F625ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift */; };
+		D8A157FA25AE54A800287FD6 /* OpenedDirectoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		D8A157DF25AA75E600287FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A157E125AA75E600287FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8A157EB25AA8DDB00287FD6 /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		D8A157F125ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreen+TableViewDataSourceAndDelegate.swift"; sourceTree = "<group>"; };
+		D8A157F625ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreen+ActionsForCreateFolderAndFile.swift"; sourceTree = "<group>"; };
+		D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedDirectoryScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		D8A157D225AA75E400287FD6 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
+				D8A157EF25ABB11D00287FD6 /* Controllers */,
 				D8A157D325AA75E400287FD6 /* AppDelegate.swift */,
-				D8A157D725AA75E400287FD6 /* MainScreen.swift */,
 				D8A157DC25AA75E600287FD6 /* Assets.xcassets */,
 				D8A157DE25AA75E600287FD6 /* LaunchScreen.storyboard */,
 				D8A157E125AA75E600287FD6 /* Info.plist */,
 				D8A157EB25AA8DDB00287FD6 /* FileManagerService.swift */,
 			);
 			path = FileManager;
+			sourceTree = "<group>";
+		};
+		D8A157EF25ABB11D00287FD6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8A157D725AA75E400287FD6 /* MainScreen.swift */,
+				D8A157F025ABB13600287FD6 /* Extensions */,
+				D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D8A157F025ABB13600287FD6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D8A157F125ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift */,
+				D8A157F625ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A157FA25AE54A800287FD6 /* OpenedDirectoryScreen.swift in Sources */,
 				D8A157EC25AA8DDB00287FD6 /* FileManagerService.swift in Sources */,
+				D8A157F725ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift in Sources */,
 				D8A157D825AA75E400287FD6 /* MainScreen.swift in Sources */,
+				D8A157F225ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift in Sources */,
 				D8A157D425AA75E400287FD6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
