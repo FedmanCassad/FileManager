@@ -15,7 +15,6 @@ struct FileManagerService {
     }
     return url
   }
-  
   var currentPath: URL?
   
   func createFolder(with name: String, at path: URL? = nil) {
@@ -33,6 +32,10 @@ struct FileManagerService {
     if  !isSucced {
       print ("Error creating file")
     }
+  }
+  
+  func readFile(at url: URL) -> Data? {
+    return FileManager.default.contents(atPath: url.path)
   }
   
   func isDirectory(for fileName: String, higherLevelPath: URL) -> Bool? {

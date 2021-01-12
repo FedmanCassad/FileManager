@@ -29,10 +29,12 @@ extension MainScreen: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    if var path = fileService.documentsDirectoryURL {
-      path.appendPathComponent(dataSource[indexPath.row])
-      let vc = OpenedFolderScreen(currentPath: path)
+    let fileName = dataSource[indexPath.row]
+    if let path = fileService.documentsDirectoryURL {
+    if let fileIsDirectory = fileService.isDirectory(for: fileName, higherLevelPath: path) {
+      let vc = fileIsDirectory ? OpenedFolderScreen(currentPath: path.appendingPathComponent(fileName)) : ViewFileScreen(currentPath: path.appendingPathComponent(fileName))
       navigationController?.pushViewController(vc, animated: true)
+    }
     }
   }
   

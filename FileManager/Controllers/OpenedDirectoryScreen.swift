@@ -95,4 +95,12 @@ class OpenedFolderScreen: MainScreen {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let fileName = dataSource[indexPath.row]
+    if let fileIsDirectory = fileService.isDirectory(for: fileName, higherLevelPath: currentPath) {
+      let vc = fileIsDirectory ? OpenedFolderScreen(currentPath: currentPath.appendingPathComponent(fileName)) : ViewFileScreen(currentPath: currentPath.appendingPathComponent(fileName))
+      navigationController?.pushViewController(vc, animated: true)
+    }
+  }
+  
 }

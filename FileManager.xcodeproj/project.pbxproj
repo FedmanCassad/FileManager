@@ -15,6 +15,7 @@
 		D8A157F225ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157F125ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift */; };
 		D8A157F725ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157F625ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift */; };
 		D8A157FA25AE54A800287FD6 /* OpenedDirectoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */; };
+		D8A157FD25AE617C00287FD6 /* ViewFileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157FC25AE617C00287FD6 /* ViewFileScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D8A157F125ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreen+TableViewDataSourceAndDelegate.swift"; sourceTree = "<group>"; };
 		D8A157F625ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreen+ActionsForCreateFolderAndFile.swift"; sourceTree = "<group>"; };
 		D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedDirectoryScreen.swift; sourceTree = "<group>"; };
+		D8A157FC25AE617C00287FD6 /* ViewFileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFileScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				D8A157D725AA75E400287FD6 /* MainScreen.swift */,
 				D8A157F025ABB13600287FD6 /* Extensions */,
 				D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */,
+				D8A157FC25AE617C00287FD6 /* ViewFileScreen.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				D8A157FA25AE54A800287FD6 /* OpenedDirectoryScreen.swift in Sources */,
 				D8A157EC25AA8DDB00287FD6 /* FileManagerService.swift in Sources */,
 				D8A157F725ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift in Sources */,
+				D8A157FD25AE617C00287FD6 /* ViewFileScreen.swift in Sources */,
 				D8A157D825AA75E400287FD6 /* MainScreen.swift in Sources */,
 				D8A157F225ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift in Sources */,
 				D8A157D425AA75E400287FD6 /* AppDelegate.swift in Sources */,
