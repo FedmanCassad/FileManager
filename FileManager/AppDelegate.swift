@@ -10,14 +10,13 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+ var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     let mainVC = MainScreen()
     let navController = UINavigationController(rootViewController: mainVC)
     window?.rootViewController = navController
     window?.makeKeyAndVisible()
-    // Override point for customization after application launch.
     return true
   }
 
