@@ -38,4 +38,12 @@ extension MainScreen: UITableViewDataSource, UITableViewDelegate {
     }
   }
   
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    guard let url = fileService.documentsDirectoryURL else { return }
+    if editingStyle == .delete {
+      fileService.deleteFileOrFolder(at: url.appendingPathComponent(dataSource[indexPath.row]))
+      tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+  }
+  
 }

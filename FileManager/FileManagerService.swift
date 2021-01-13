@@ -38,6 +38,10 @@ struct FileManagerService {
     return FileManager.default.contents(atPath: url.path)
   }
   
+  func deleteFileOrFolder(at path: URL) {
+    try? FileManager.default.removeItem(at: path)
+  }
+  
   func isDirectory(for fileName: String, higherLevelPath: URL) -> Bool? {
     let pathToCheck = higherLevelPath.appendingPathComponent(fileName)
     guard let pathIsDirectory = try? pathToCheck.resourceValues(forKeys: [.isDirectoryKey]).isDirectory  else { return nil}

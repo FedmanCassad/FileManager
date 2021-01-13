@@ -103,4 +103,11 @@ class OpenedFolderScreen: MainScreen {
     }
   }
   
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      fileService.deleteFileOrFolder(at: currentPath.appendingPathComponent(dataSource[indexPath.row]))
+      tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+  }
+  
 }
