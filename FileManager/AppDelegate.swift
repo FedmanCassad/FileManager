@@ -9,9 +9,9 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
- var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
-
+  
+  lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     let mainVC = MainScreen()
     let navController = UINavigationController(rootViewController: mainVC)
@@ -19,6 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
     return true
   }
-
+  
 }
 

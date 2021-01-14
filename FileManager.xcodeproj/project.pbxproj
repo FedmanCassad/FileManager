@@ -16,6 +16,12 @@
 		D8A157F725ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157F625ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift */; };
 		D8A157FA25AE54A800287FD6 /* OpenedDirectoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */; };
 		D8A157FD25AE617C00287FD6 /* ViewFileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A157FC25AE617C00287FD6 /* ViewFileScreen.swift */; };
+		D8A1580825AFB8E200287FD6 /* MainScreen+ConfigureUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1580725AFB8E200287FD6 /* MainScreen+ConfigureUI.swift */; };
+		D8A1580B25AFB97B00287FD6 /* ImagesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1580A25AFB97B00287FD6 /* ImagesEnum.swift */; };
+		D8A1581225AFCD3B00287FD6 /* OpenedFolderScreen+TableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1581125AFCD3B00287FD6 /* OpenedFolderScreen+TableViewDataSourceAndDelegate.swift */; };
+		D8A1581625AFCD6800287FD6 /* OpenedFolderScreen+AddActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1581525AFCD6800287FD6 /* OpenedFolderScreen+AddActions.swift */; };
+		D8A1581A25AFCE1C00287FD6 /* OpenedFolderScreen+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1581925AFCE1C00287FD6 /* OpenedFolderScreen+SetupUI.swift */; };
+		D8A1581F25AFCECE00287FD6 /* ViewFileScreen+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1581E25AFCECE00287FD6 /* ViewFileScreen+SetupUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		D8A157F625ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreen+ActionsForCreateFolderAndFile.swift"; sourceTree = "<group>"; };
 		D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedDirectoryScreen.swift; sourceTree = "<group>"; };
 		D8A157FC25AE617C00287FD6 /* ViewFileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFileScreen.swift; sourceTree = "<group>"; };
+		D8A1580725AFB8E200287FD6 /* MainScreen+ConfigureUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreen+ConfigureUI.swift"; sourceTree = "<group>"; };
+		D8A1580A25AFB97B00287FD6 /* ImagesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesEnum.swift; sourceTree = "<group>"; };
+		D8A1581125AFCD3B00287FD6 /* OpenedFolderScreen+TableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenedFolderScreen+TableViewDataSourceAndDelegate.swift"; sourceTree = "<group>"; };
+		D8A1581525AFCD6800287FD6 /* OpenedFolderScreen+AddActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenedFolderScreen+AddActions.swift"; sourceTree = "<group>"; };
+		D8A1581925AFCE1C00287FD6 /* OpenedFolderScreen+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenedFolderScreen+SetupUI.swift"; sourceTree = "<group>"; };
+		D8A1581E25AFCECE00287FD6 /* ViewFileScreen+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewFileScreen+SetupUI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 		D8A157D225AA75E400287FD6 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
+				D8A1580225AFB70C00287FD6 /* Models */,
 				D8A157EF25ABB11D00287FD6 /* Controllers */,
 				D8A157D325AA75E400287FD6 /* AppDelegate.swift */,
 				D8A157DC25AA75E600287FD6 /* Assets.xcassets */,
@@ -76,10 +89,9 @@
 		D8A157EF25ABB11D00287FD6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D8A157D725AA75E400287FD6 /* MainScreen.swift */,
-				D8A157F025ABB13600287FD6 /* Extensions */,
-				D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */,
-				D8A157FC25AE617C00287FD6 /* ViewFileScreen.swift */,
+				D8A1581C25AFCEA300287FD6 /* ViewFileScreen */,
+				D8A1580F25AFCCE200287FD6 /* OpenedFolderScreen */,
+				D8A1580D25AFCBEF00287FD6 /* MainScreen */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -89,6 +101,60 @@
 			children = (
 				D8A157F125ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift */,
 				D8A157F625ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift */,
+				D8A1580725AFB8E200287FD6 /* MainScreen+ConfigureUI.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D8A1580225AFB70C00287FD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8A1580A25AFB97B00287FD6 /* ImagesEnum.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8A1580D25AFCBEF00287FD6 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D8A157F025ABB13600287FD6 /* Extensions */,
+				D8A157D725AA75E400287FD6 /* MainScreen.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		D8A1580F25AFCCE200287FD6 /* OpenedFolderScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D8A1581025AFCD0100287FD6 /* Extensions */,
+				D8A157F925AE54A800287FD6 /* OpenedDirectoryScreen.swift */,
+			);
+			path = OpenedFolderScreen;
+			sourceTree = "<group>";
+		};
+		D8A1581025AFCD0100287FD6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D8A1581125AFCD3B00287FD6 /* OpenedFolderScreen+TableViewDataSourceAndDelegate.swift */,
+				D8A1581525AFCD6800287FD6 /* OpenedFolderScreen+AddActions.swift */,
+				D8A1581925AFCE1C00287FD6 /* OpenedFolderScreen+SetupUI.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D8A1581C25AFCEA300287FD6 /* ViewFileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D8A1581D25AFCEB000287FD6 /* Extensions */,
+				D8A157FC25AE617C00287FD6 /* ViewFileScreen.swift */,
+			);
+			path = ViewFileScreen;
+			sourceTree = "<group>";
+		};
+		D8A1581D25AFCEB000287FD6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D8A1581E25AFCECE00287FD6 /* ViewFileScreen+SetupUI.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,10 +229,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A157FA25AE54A800287FD6 /* OpenedDirectoryScreen.swift in Sources */,
+				D8A1581625AFCD6800287FD6 /* OpenedFolderScreen+AddActions.swift in Sources */,
 				D8A157EC25AA8DDB00287FD6 /* FileManagerService.swift in Sources */,
+				D8A1580B25AFB97B00287FD6 /* ImagesEnum.swift in Sources */,
+				D8A1580825AFB8E200287FD6 /* MainScreen+ConfigureUI.swift in Sources */,
+				D8A1581A25AFCE1C00287FD6 /* OpenedFolderScreen+SetupUI.swift in Sources */,
 				D8A157F725ABB54000287FD6 /* MainScreen+ActionsForCreateFolderAndFile.swift in Sources */,
 				D8A157FD25AE617C00287FD6 /* ViewFileScreen.swift in Sources */,
+				D8A1581F25AFCECE00287FD6 /* ViewFileScreen+SetupUI.swift in Sources */,
 				D8A157D825AA75E400287FD6 /* MainScreen.swift in Sources */,
+				D8A1581225AFCD3B00287FD6 /* OpenedFolderScreen+TableViewDataSourceAndDelegate.swift in Sources */,
 				D8A157F225ABB14F00287FD6 /* MainScreen+TableViewDataSourceAndDelegate.swift in Sources */,
 				D8A157D425AA75E400287FD6 /* AppDelegate.swift in Sources */,
 			);

@@ -12,8 +12,8 @@ class MainScreen: UIViewController {
   let fileService = FileManagerService()
   var dataSource: [String] {
     guard let path = fileService.documentsDirectoryURL?.path else {
-    return Array<String>()}
-    if var directory = try? FileManager.default.contentsOfDirectory(atPath: path) {
+      return Array<String>()}
+    if var directory = try? fileService.contentsOfDirectory(atPath: path) {
       directory = {
         var temporaryFolderNamesArray = Array<String>()
         var temporaryFileNamesArray = Array<String>()
@@ -41,21 +41,8 @@ class MainScreen: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView = UITableView(frame: view.bounds)
-    view.backgroundColor = .red
-    tableView.dataSource = self
-    tableView.delegate = self
-    view.addSubview(tableView)
-    let addDirectoryImage = UIImage(named: "addDirectory")
-    let createFolderBarButtonItem = UIBarButtonItem(image: addDirectoryImage, style: .plain, target: self, action: #selector(addFolder(sender:)))
-    let addFileImage = UIImage(named: "addFile")
-    let createFileBarButtonItem = UIBarButtonItem(image: addFileImage, style: .plain, target: self, action: #selector(addFile(sender:)))
-    navigationItem.rightBarButtonItems = [createFileBarButtonItem, createFolderBarButtonItem]
-    
+    setupUI()
   }
-  
-  
-  
   
 }
 
